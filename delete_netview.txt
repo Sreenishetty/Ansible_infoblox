@@ -1,0 +1,20 @@
+---
+- name: config
+  hosts: localhost
+  vars:
+    nios_provider:
+      host: 3.134.169.139
+      username: admin
+      password: Password1!
+      wapi_version: "2.9"
+
+  connection: local
+  tasks:
+   - name: configure on ipv4 host record
+     nios_network_view:
+       name: ansibleNetView
+       extattrs:
+          Site: Demo Site
+       comment: Created with ansible
+       state: absent
+       provider: "{{ nios_provider }}"

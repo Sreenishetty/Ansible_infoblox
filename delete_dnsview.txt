@@ -1,0 +1,19 @@
+---
+- hosts: localhost
+  vars:
+    nios_provider:
+      host: 3.134.169.139
+      username: admin
+      password: Password1!
+      wapi_version: "2.9"
+
+  tasks:
+   - name: delete DNS view
+     nios_dns_view:
+       name: ansibleDnsView
+       network_view: ansibleNetView
+       extattrs:
+          Site: Demo Site
+       comment: Deleted with ansible
+       state: absent
+       provider: "{{ nios_provider }}"

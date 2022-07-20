@@ -1,0 +1,24 @@
+---
+- hosts: localhost
+  vars:
+    nios_provider:
+      host: 3.134.169.139
+      username: admin
+      password: Password1!
+      wapi_version: "2.9"
+
+  connection: local
+  tasks:
+   - name: create network
+     nios_network:
+       network: 10.0.0.0/24
+       network_view: ansibleNetView
+       options:
+         - name: domain-name
+           value: infoblox.com
+       extattrs:
+          Site: Demo Site
+       comment: Created with ansible
+       state: present
+       provider: "{{ nios_provider }}"
+                                            

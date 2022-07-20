@@ -1,0 +1,20 @@
+---
+- name: creating a neywork view
+  hosts: localhost
+  vars:
+    nios_provider:
+      host: 3.134.169.139
+      username: admin
+      password: Password1!
+      wapi_version: "2.9"
+
+  connection: local
+  tasks:
+   - name: creating a networkview
+     nios_network_view:
+       name: ansibleNetView
+       extattrs:
+          Site: Demo Site
+       comment: Created with ansible
+       state: present
+       provider: "{{ nios_provider }}"
