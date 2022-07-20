@@ -1,0 +1,11 @@
+using Ansible nios modules with Infoblox, you must install the infoblox-client on your Ansible control node
+--> sudo pip install infoblox-client
+
+To view the version of infoblox clien installed
+--> pip3 show infoblox-client
+
+Documentation for the ansible-infoblox
+https://www.infoblox.com/wp-content/uploads/infoblox-deployment-guide-automate-infoblox-infrastructure-using-ansible.pdf
+
+Complete creating records and other important things, We can use this Documentation
+https://docs.w3cub.com/ansible~2.9/modules/nios_host_record_module
