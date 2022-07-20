@@ -48,3 +48,23 @@ nios_srv_record – Configure Infoblox NIOS SRV records
 nios_txt_record – Configure Infoblox NIOS txt records
 
 nios_zone – Configure Infoblox NIOS DNS zones
+
+# Plugins
+nios_inventory: List all the hosts with records created in NIOS
+
+nios_lookup: Look up queries for NIOS database objects
+
+nios_next_ip: Returns the next available IP address for a network
+
+nios_next_network: Returns the next available network addresses for a given network CIDR
+
+# Installation
+## Dependencies
+Python version 2.7 or later
+Ansible version 2.9.0 or later
+NIOS 8.2.4 or later
+
+# Prerequisites
+Install the infoblox-client WAPI package. To install, run the following command:
+
+$ pip install infoblox-client
