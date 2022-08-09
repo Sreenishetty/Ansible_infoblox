@@ -2,13 +2,13 @@
 Using ansible-playbook automate the infoblox for creating, deleting the host records 
 Ansible-Infoblox Documentaion 
 
-# About 
+## About 
 Infoblox NIOS Modules for Ansible Collections allows managing your NIOS objects through APIs. It, thus, enables the DNS and IPAM automation of VM workloads that are deployed across multiple platforms. The nios_modules collection provides modules and plugins for managing the networks, IP addresses, and DNS records in NIOS. This collection is hosted on Ansible Galaxy under infoblox.nios_modules.
 
 # Modules Overview
 The infoblox.nios_modules collection has the following content:
 
-# Modules
+## Modules
 nios_a_record – Configure Infoblox NIOS A records
 
 nios_aaaa_record – Configure Infoblox NIOS AAAA records
